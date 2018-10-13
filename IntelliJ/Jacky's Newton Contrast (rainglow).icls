@@ -1,14 +1,11 @@
 <scheme name="Jacky's Newton Contrast (rainglow)" version="142" parent_scheme="Darcula">
-  <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
-    <property name="created">2018-09-16T19:31:12</property>
+    <property name="created">2018-10-13T12:46:05</property>
     <property name="ide">idea</property>
-    <property name="ideVersion">2018.2.3.0.0</property>
-    <property name="modified">2018-09-16T19:31:25</property>
+    <property name="ideVersion">2018.2.4.0.0</property>
+    <property name="modified">2018-10-13T12:46:19</property>
     <property name="originalScheme">Jacky's Newton Contrast (rainglow)</property>
   </metaInfo>
-  <option name="CONSOLE_FONT_NAME" value="InputMono" />
-  <option name="CONSOLE_LINE_SPACING" value="1.0" />
   <colors>
     <option name="ADDED_LINES_COLOR" value="9fd356" />
     <option name="ANNOTATIONS_COLOR" value="b0bec5" />
@@ -22,7 +19,8 @@
     <option name="FILESTATUS_COPIED" value="629755" />
     <option name="FILESTATUS_HIJACKED" value="ffcb6b" />
     <option name="FILESTATUS_IDEA_SVN_FILESTATUS_EXTERNAL" value="9fd356" />
-    <option name="FILESTATUS_IGNORE.PROJECT_VIEW.IGNORED" value="808080" />
+    <option name="FILESTATUS_IGNORE.PROJECT_VIEW.IGNORED" value="606060" />
+    <option name="FILESTATUS_NOT_CHANGED" value="aeaeae" />
     <option name="FILESTATUS_OBSOLETE" value="ffcb6b" />
     <option name="FILESTATUS_SUPPRESSED" value="546e7a" />
     <option name="FILESTATUS_SWITCHED" value="f77669" />
