@@ -1,0 +1,13 @@
+[user]
+  name = Jacky Xu
+  username = xtangle
+  email = jackyxu07@gmail.com
+[core]
+  eol = lf
+  autocrlf = false
+  editor = vim
+  whitespace = tab-in-indent,trailing-space,tabwidth=2
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
