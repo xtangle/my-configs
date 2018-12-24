@@ -12,7 +12,7 @@ cp -f ${config_files}/Tilda/config_0 ${HOME}/.config/tilda
 
 # adjust positioning
 width_ratio=0.75
-height_ratio=0.65
+height_ratio=0.7
 width_pixels=$(bc <<< "${width_ratio} * ${screen_width} / 1")
 height_pixels=$(bc <<< "${height_ratio} * ${screen_height} / 1")
 x_pos=$(bc <<< "(${screen_width} - ${width_pixels}) / 2")

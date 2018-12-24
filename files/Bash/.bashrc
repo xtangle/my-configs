@@ -135,8 +135,11 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 # generate .gitattribute
 function ga() { curl -L -s https://gitattributes.io/api/$@ ;}
 
+# query command on explain-shell in a terminal browser
+function es() { lynx "https://explainshell.com/explain?cmd=$(urlencode "$*")" ;}
+
 # move 'up' so many directories instead of using several cd ../../, etc.
-up() { cd $(eval printf '../'%.0s {1..$1}) && pwd; }
+function up() { cd $(eval printf '../'%.0s {1..$1}) && pwd ;}
 
 # nvm configuration
 export NVM_DIR="$HOME/.nvm"
