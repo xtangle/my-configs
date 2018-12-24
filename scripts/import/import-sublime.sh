@@ -2,8 +2,15 @@
 
 set -e
 
-SUBL_USER_CFGS="${HOME}/.config/sublime-text-3/Packages/User"
-mkdir -p ${SUBL_USER_CFGS}
-backup ${SUBL_USER_CFGS}/*
+# copy configs
+sublime_configs="${HOME}/.config/sublime-text-3/Packages/User"
+mkdir -p ${sublime_configs}
+backup "${sublime_configs}/Default (Linux).sublime-keymap"
+backup "${sublime_configs}/Preferences.sublime-settings"
+cp -f ${config_files}/Sublime/* ${sublime_configs}
 
-cp -f ${config_files}/Sublime/* ${SUBL_USER_CFGS}
+# adjust dpi scaling if high resolution
+if [[ ${screen_width} -gt 2560 ]]; then
+  scale_factor=$(bc <<< "scale=2; 1 + 3 * ((${screen_width} / 2560) - 1)")
+  cat <<< "$(cat "${sublime_configs}/Preferences.sublime-settings" | sed '/\/\//d' | jq ". + {dpi_scale: ${scale_factor}}")" > ${sublime_configs}/Preferences.sublime-settings
+fi
