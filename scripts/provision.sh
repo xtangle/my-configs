@@ -11,6 +11,6 @@ reset_results_file
 run configure-my-configs.sh
 run configure-tilda.sh
 
-${config_scripts}/bin/import-configs.sh
+${config_scripts}/import-configs.sh
 
 print_results
