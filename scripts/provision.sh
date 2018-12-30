@@ -10,6 +10,7 @@ reset_results_file
 
 run configure-my-configs.sh
 run configure-tilda.sh
+run configure-yarn.sh
 
 ${config_scripts}/import-configs.sh
 

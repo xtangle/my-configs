@@ -1,7 +1,7 @@
 # my-configs
 
 This repository contains configurations for most of the development tools that I use. It also contains some useful scripts
-(`import-configs.sh`, `export-configs.sh`) that handles the importing/exporting of these configurations automatically. 
+(`import-configs`, `export-configs`) that handles the importing/exporting of these configurations automatically. 
 
 There is a script named `provision.sh` that is intended to run as the last step in the provisioning process 
 of a new development machine. The full provisioning process and the Vagrant box for the development machine 
