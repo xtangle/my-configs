@@ -12,5 +12,8 @@ cp -f "${CONFIG_FILES}/Sublime/"* "${sublime_configs}"
 # adjust dpi scaling if high resolution
 if [[ ${SCREEN_WIDTH} -gt 2560 ]]; then
   scale_factor=$(bc <<< "scale=2; 1 + 3 * ((${SCREEN_WIDTH} / 2560) - 1)")
-  cat <<< "$(cat "${sublime_configs}/Preferences.sublime-settings" | sed '/\/\//d' | jq ". + {dpi_scale: ${scale_factor}}")" > "${sublime_configs}/Preferences.sublime-settings"
+  settings="${sublime_configs}/Preferences.sublime-settings"
+  tmp_settings="${settings}.tmp"
+  sed '/\/\//d' "${settings}" | jq ". + {dpi_scale: ${scale_factor}}" > "${tmp_settings}" \
+    && mv "${tmp_settings}" "${settings}"
 fi
