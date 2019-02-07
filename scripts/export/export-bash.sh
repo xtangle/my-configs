@@ -2,5 +2,5 @@
 
 set -e
 
-cp -f ${HOME}/.bashrc ${config_files}/Bash
-cp -f ${HOME}/.bash_aliases ${config_files}/Bash
+cp -f "${HOME}/.bashrc" "${CONFIG_FILES}/Bash"
+cp -f "${HOME}/.bash_aliases" "${CONFIG_FILES}/Bash"

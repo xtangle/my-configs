@@ -2,8 +2,8 @@
 
 set -e
 
-# loads nvm
-[[ -s ${HOME}/.nvm/nvm.sh ]] && . ${HOME}/.nvm/nvm.sh
+# load nvm if exists
+load "${HOME}/.nvm/nvm.sh"
 
 # installs useful global packages for yarn
 packages=(@angular/cli @vue/cli create-react-app polymer-cli yo degit how-2)

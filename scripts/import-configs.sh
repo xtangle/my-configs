@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-source ${HOME}/Projects/my-configs/scripts/bootstrap/bootstrap.sh
+# shellcheck source=/dev/null
+source "${HOME}/Projects/my-configs/scripts/bootstrap/bootstrap.sh"
 bootstrap
 
 run import-bash.sh
