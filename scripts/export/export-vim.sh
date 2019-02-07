@@ -2,4 +2,4 @@
 
 set -e
 
-cp -f ${HOME}/.vimrc ${CONFIG_FILES}/Vim
+cp -f "${HOME}/.vimrc" "${CONFIG_FILES}/Vim"

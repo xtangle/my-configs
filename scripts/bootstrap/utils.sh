@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+# shellcheck disable=2155
+
 function get_screen_width {
   if [[ -n "${DISPLAY_WIDTH}" ]]; then
     echo "${DISPLAY_WIDTH}"
   else
-    echo "$(xdpyinfo | grep -oP 'dimensions:\s+\K\S+(?=x)')"
+    xdpyinfo | grep -oP 'dimensions:\s+\K\S+(?=x)'
   fi
 }
 
@@ -12,7 +14,7 @@ function get_screen_height {
   if [[ -n "${DISPLAY_HEIGHT}" ]]; then
     echo "${DISPLAY_HEIGHT}"
   else
-    echo "$(xdpyinfo | grep -oP 'dimensions:\s+\S+x\K\S+')"
+    xdpyinfo | grep -oP 'dimensions:\s+\S+x\K\S+'
   fi
 }
 

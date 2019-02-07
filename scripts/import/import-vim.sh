@@ -2,5 +2,5 @@
 
 set -e
 
-backup ${HOME}/.vimrc
-cp -f ${CONFIG_FILES}/Vim/.vimrc ${HOME}
+backup "${HOME}/.vimrc"
+cp -f "${CONFIG_FILES}/Vim/.vimrc" "${HOME}"

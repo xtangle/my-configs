@@ -2,4 +2,4 @@
 
 set -e
 
-cp -f ${HOME}/.gitconfig ${CONFIG_FILES}/Git
+cp -f "${HOME}/.gitconfig" "${CONFIG_FILES}/Git"
