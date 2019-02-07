@@ -2,4 +2,4 @@
 
 set -e
 
-cp -f ${HOME}/.config/tilda/config_0 ${config_files}/Tilda
+cp -f ${HOME}/.config/tilda/config_0 ${CONFIG_FILES}/Tilda

@@ -3,4 +3,4 @@
 set -e
 
 backup ${HOME}/.vimrc
-cp -f ${config_files}/Vim/.vimrc ${HOME}
+cp -f ${CONFIG_FILES}/Vim/.vimrc ${HOME}

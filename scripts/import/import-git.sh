@@ -3,4 +3,4 @@
 set -e
 
 backup ${HOME}/.gitconfig
-cp -f ${config_files}/Git/.gitconfig ${HOME}
+cp -f ${CONFIG_FILES}/Git/.gitconfig ${HOME}

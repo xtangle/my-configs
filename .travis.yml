@@ -1,0 +1,4 @@
+language: bash
+script:
+  - shellcheck --version
+  - for file in $(find ./scripts -type f); do shellcheck --format=gcc $file; done;
