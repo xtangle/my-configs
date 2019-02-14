@@ -1,6 +1,6 @@
 # my-configs
 
-[![Build Status](https://travis-ci.org/xtangle/my-configs.svg?branch=master)](https://travis-ci.org/xtangle/my-configs)
+[![Build Status](https://img.shields.io/travis/com/xtangle/my-configs.svg)](https://travis-ci.com/xtangle/my-configs)
 
 This repository contains configurations for most of the development tools that I use. It also contains some useful scripts
 (`import-configs`, `export-configs`) that handles the importing/exporting of these configurations automatically. 
