@@ -12,6 +12,7 @@ reset_results_file
 run configure-my-configs.sh
 run configure-tilda.sh
 run configure-yarn.sh
+run configure-intellij.sh
 
 "${CONFIG_SCRIPTS}/import-configs.sh"
 
