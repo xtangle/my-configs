@@ -4,6 +4,7 @@ function bootstrap {
   export CONFIG_FILES="${HOME}/Projects/my-configs/files"
   export CONFIG_SCRIPTS="${HOME}/Projects/my-configs/scripts"
 
+  # adds configure, import, and export directories to PATH
   export PATH="${CONFIG_SCRIPTS}/configure:${CONFIG_SCRIPTS}/import:${CONFIG_SCRIPTS}/export:${PATH}"
 
   # set a different provision results file to not overwrite the one from devbox
