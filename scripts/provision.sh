@@ -10,11 +10,13 @@ bootstrap
 reset_results_file
 
 run configure-my-configs.sh
-run configure-projects.sh
 run configure-tilda.sh
 run configure-yarn.sh
 run configure-intellij.sh
 
 "${CONFIG_SCRIPTS}/import-configs.sh"
+
+run git-clone-all.sh
+run git-pull-all.sh
 
 print_results
