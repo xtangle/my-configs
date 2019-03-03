@@ -8,3 +8,6 @@ alias po='popd'
 
 # alias for how2
 alias h2='how2'
+
+# alias for shellcheck
+alias sc='shellcheck'

@@ -141,6 +141,17 @@ function es() { lynx "https://explainshell.com/explain?cmd=$(urlencode "$*")" ;}
 # move 'up' so many directories instead of using several cd ../../, etc.
 function up() { cd $(eval printf '../'%.0s {1..$1}) && pwd ;}
 
+# run shellcheck command recursively in directories
+function sc-all() {
+  for dir in "$@"; do
+    if [[ -d "${dir}" ]]; then
+      for file in $(find "${dir}" -type f -name "*.sh"); do shellcheck --format=gcc "${file}"; done;
+    else
+      shellcheck "${dir}"
+    fi
+  done
+}
+
 # nvm configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
