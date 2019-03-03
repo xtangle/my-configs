@@ -6,7 +6,8 @@
   helper = store
 [core]
   eol = lf
-  autocrlf = false
+  autocrlf = input
+  safecrlf = true
   editor = vim
   whitespace = tab-in-indent,trailing-space,tabwidth=2
 [filter "lfs"]
