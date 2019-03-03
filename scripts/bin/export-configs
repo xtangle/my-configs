@@ -1,1 +1,3 @@
-../export-configs.sh
+#!/usr/bin/env bash
+
+"${HOME}/Projects/my-configs/scripts/export-configs.sh"

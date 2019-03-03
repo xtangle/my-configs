@@ -1,1 +1,3 @@
-../import-configs.sh
+#!/usr/bin/env bash
+
+"${HOME}/Projects/my-configs/scripts/import-configs.sh"

@@ -129,11 +129,14 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-# generate .gitignore
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+# create .gitignore
+function cgi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-# generate .gitattribute
-function ga() { curl -L -s https://gitattributes.io/api/$@ ;}
+# create .gitattribute
+function cga() { curl -L -s https://gitattributes.io/api/$@ ;}
+
+# git add, commit, and push
+function gacp() { git add -A && git commit -m "${1}" && git push ;}
 
 # query command on explain-shell in a terminal browser
 function es() { lynx "https://explainshell.com/explain?cmd=$(urlencode "$*")" ;}
@@ -145,7 +148,7 @@ function up() { cd $(eval printf '../'%.0s {1..$1}) && pwd ;}
 function al() { [ $# != 0 ] && printf "%s\n" "$@" ;}
 
 # run shellcheck command recursively in directories
-function sc-all() {
+function shellcheck-all() {
   for dir in "$@"; do
     if [[ -d "${dir}" ]]; then
       for file in $(find "${dir}" -type f -name "*.sh"); do shellcheck --format=gcc "${file}"; done;

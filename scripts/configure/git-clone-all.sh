@@ -11,7 +11,8 @@ function git_clone {
 }
 
 function git_clone_all {
-  local -r projects_dir="${1}"
+  local -r projects_dir="$(realpath "${1}")"
+  mkdir -p "${projects_dir}"
   cd "${projects_dir}"
   local -r username="$(cat "${HOME}/.gitconfig" | grep -Po "^\s+username = \K.*")"
   if [[ -z "${username}" ]]; then

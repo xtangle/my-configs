@@ -1,1 +1,3 @@
-../configure/git-pull-all.sh
+#!/usr/bin/env bash
+
+"${HOME}/Projects/my-configs/scripts/configure/git-pull-all.sh" "$@"

@@ -6,8 +6,28 @@ alias urldecode='python3 -c "import sys, urllib.parse; print(urllib.parse.unquot
 alias pd='pushd'
 alias po='popd'
 
+# aliases for git
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit'
+alias gcf='git config'
+alias gch='git checkout'
+alias gcl='git clone'
+alias gf='git fetch'
+alias gi='git init'
+alias gl='git log'
+alias gm='git merge'
+alias gp='git push'
+alias gpu='git pull'
+alias gr='git reset'
+alias gre='git remote'
+alias gs='git status'
+alias gst='git stash'
+alias gg='gacp'
+
 # alias for how2
 alias h2='how2'
 
-# alias for shellcheck
+# aliases for shellcheck
 alias sc='shellcheck'
+alias sca='shellcheck-all'
