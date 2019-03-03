@@ -141,6 +141,9 @@ function es() { lynx "https://explainshell.com/explain?cmd=$(urlencode "$*")" ;}
 # move 'up' so many directories instead of using several cd ../../, etc.
 function up() { cd $(eval printf '../'%.0s {1..$1}) && pwd ;}
 
+# list arguments one per line
+function al() { [ $# != 0 ] && printf "%s\n" "$@" ;}
+
 # run shellcheck command recursively in directories
 function sc-all() {
   for dir in "$@"; do
