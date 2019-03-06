@@ -24,6 +24,7 @@ alias gre='git remote'
 alias gs='git status'
 alias gst='git stash'
 alias gg='gacp'
+alias gsb='git-sync-branches'
 
 # alias for how2
 alias h2='how2'

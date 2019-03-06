@@ -138,6 +138,9 @@ function cga() { curl -L -s https://gitattributes.io/api/$@ ;}
 # git add, commit, and push
 function gacp() { git add -A && git commit -m "${1}" && git push ;}
 
+# git clean up stale local branches that are not merged (add -D to force delete)
+function git-sync-branches() { git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs -r git branch ${1:--d} ;}
+
 # query command on explain-shell in a terminal browser
 function es() { lynx "https://explainshell.com/explain?cmd=$(urlencode "$*")" ;}
 
