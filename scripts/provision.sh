@@ -10,6 +10,7 @@ bootstrap
 reset_results_file
 
 run configure-my-configs.sh
+run configure-my-secrets.sh
 run configure-tilda.sh
 run configure-yarn.sh
 run configure-intellij.sh
