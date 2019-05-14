@@ -8,6 +8,7 @@
   eol = lf
   autocrlf = input
   safecrlf = true
+  filemode = true
   editor = vim
   whitespace = tab-in-indent,trailing-space,tabwidth=2
 [filter "lfs"]
