@@ -2,9 +2,6 @@
 
 set -e
 
-# stop tilda
-killall -q tilda || true
-
 # copy configs
 mkdir -p "${HOME}/.config/tilda"
 backup "${HOME}/.config/tilda/config_0"
@@ -24,6 +21,3 @@ sed -i -E \
   -e "s/(x_pos)=.*/\1=${x_pos}/" \
   -e "s/(y_pos)=.*/\1=${y_pos}/" \
   "${HOME}/.config/tilda/config_0"
-
-# start tilda
-nohup tilda >/dev/null 2>&1 &
