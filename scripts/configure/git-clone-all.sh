@@ -16,10 +16,10 @@ function git_clone_all {
   cd "${projects_dir}"
   local -r username="$(grep -Po "^\s+username = \K.*" "${HOME}/.gitconfig")"
   if [[ -z "${username}" ]]; then
-    echo "Git username could not be parsed from ~/.gitconfig" >/dev/stderr
+    echo ">> Git username could not be parsed from ~/.gitconfig" >/dev/stderr
     exit 1
   fi
-  echo "Cloning all git repositories from '${username}' to: ${projects_dir}"
+  echo ">> Cloning all git repositories from '${username}' to: ${projects_dir}"
   local -r repos_url="https://api.github.com/users/${username}/repos?per_page=1000"
   curl -s "${repos_url}" | grep -Poz '"clone_url": "\K.*(?=")' | while IFS= read -r -d '' repo; do git_clone "${repo}"; done
 }

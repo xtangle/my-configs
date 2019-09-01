@@ -19,7 +19,7 @@ function git_pull {
 function git_pull_all {
   local -r projects_dir="$(realpath "${1}")"
   cd "${projects_dir}"
-  echo "Updating all git repositories in: ${projects_dir}"
+  echo ">> Updating all git repositories in: ${projects_dir}"
   find . -maxdepth 1 -type d -print0 | while IFS= read -r -d '' dir; do git_pull "${dir}"; done
 }
 

@@ -8,6 +8,7 @@ source "${HOME}/Projects/my-configs/scripts/bootstrap/bootstrap.sh"
 bootstrap
 
 reset_results_file
+clear_logs_dir
 
 run configure-my-configs.sh
 run configure-my-secrets.sh

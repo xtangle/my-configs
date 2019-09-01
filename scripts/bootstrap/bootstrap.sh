@@ -7,8 +7,9 @@ function bootstrap {
   # adds configure, import, and export directories to PATH
   export PATH="${CONFIG_SCRIPTS}/configure:${CONFIG_SCRIPTS}/import:${CONFIG_SCRIPTS}/export:${PATH}"
 
-  # set a different provision results file to not overwrite the one from devbox
-  export RESULTS_FILE="${HOME}/devbox/tmp/provision-results.my-configs.csv"
+  # set a different provision results file and logs directory to not overwrite the one from devbox
+  export RESULTS_FILE="${HOME}/devbox/out/provision-results.my-configs.csv"
+  export LOGS_DIR="${HOME}/devbox/out/logs.my-configs"
 
   # sources all files in the bootstrap directory of devbox scripts except bootstrap.sh
   eval "$(find "${HOME}/devbox/scripts/bootstrap" -maxdepth 1 -type f ! -name 'bootstrap.sh' -exec echo source \'{}\'';' \;)"
