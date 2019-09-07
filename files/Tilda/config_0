@@ -1,6 +1,6 @@
 tilda_config_version="1.4.1"
 # command=""
-font="Input Mono 11"
+font="Input Mono 12"
 key="<Primary>grave"
 addtab_key="<Primary>t"
 fullscreen_key="F11"
