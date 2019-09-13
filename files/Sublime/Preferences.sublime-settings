@@ -1,8 +1,8 @@
 {
-	"font_size": 13,
-	"remember_full_screen": true,
-  "scroll_speed": 32.0,
-	"tab_size": 2,
-	"translate_tabs_to_spaces": true,
-  "ui_scale": 1.0,
+  "font_size": 13,
+  "remember_full_screen": true,
+  "scroll_speed": 32,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "ui_scale": 1
 }
