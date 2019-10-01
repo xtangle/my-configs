@@ -130,10 +130,10 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # create .gitignore
-function cgi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+function cgi() { curl -L -s https://www.gitignore.io/api/$@ | dos2unix ;}
 
 # create .gitattribute
-function cga() { curl -L -s https://gitattributes.io/api/$@ ;}
+function cga() { curl -L -s https://gitattributes.io/api/$@ | dos2unix ;}
 
 # git add, commit, and push
 function gacp() { git add -A && git commit -m "${1}" && git push ;}
