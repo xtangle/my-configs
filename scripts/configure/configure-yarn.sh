@@ -5,7 +5,7 @@ set -e
 function install_yarn_pkg {
   local -r installed="${1}"
   local -r pkg="${2}"
-  if ! echo "${installed}" | contains "\"${pkg}"; then
+  if ! echo "${installed}" | contains "\"${pkg}@"; then
     echo ">> installing global package ${pkg}"
     yarn global add "${pkg}"
   else
