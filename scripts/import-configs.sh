@@ -9,3 +9,4 @@ run import-git.sh
 run import-tilda.sh
 run import-sublime.sh
 run import-vim.sh
+run import-haskell.sh
