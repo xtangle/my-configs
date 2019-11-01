@@ -10,6 +10,7 @@ This is a step-by-step summary on setting up Pi-hole on a Raspberry Pi Zero W as
     - `sudo raspi-config`
     - Change default username/password
     - Network Options -> Set hostname to eg. `pi-hole`
+    - Localization Options -> Set Timezone
     - Boot Options -> Enable console autologin and wait for network at boot
     - Interfacing Options -> Enable SSH
     - Update
@@ -24,21 +25,26 @@ This is a step-by-step summary on setting up Pi-hole on a Raspberry Pi Zero W as
 1. Set up script to automatically restart wireless network when network connection is dropped:
     - As sudo, create the file `/usr/local/bin/checkwifi.sh` with contents:
         ```shell script
+        echo "Current timestamp: $(date)"
+        echo "Checking wifi network connection..."
+        
         ping -c4 192.168.1.1 > /dev/null
          
-        if [ $? != 0 ] 
-        then
+        if [ $? -eq 0 ]; then
+          echo "Network connection is up"
+        else
           echo "No network connection, restarting wlan0"
           /sbin/ifdown 'wlan0'
           sleep 5
           /sbin/ifup --force 'wlan0'
+          echo "Done"
         fi
-        ``` 
+        ```
         Replace 192.168.1.1 with your gateway IP if needed be.
     - Make sure script has correct permissions: `sudo chmod 775 /usr/local/bin/checkwifi.sh`
     - Create a crontab to run this script every 5 minutes:
         1. Edit crontab with `crontab -e`
-        1. Add the following line: `*/5 * * * * /usr/bin/sudo -H /usr/local/bin/checkwifi.sh >> /dev/null 2>&1`
+        1. Add the following line: `*/5 * * * * /usr/bin/sudo -H /usr/local/bin/checkwifi.sh 2>&1 > /home/pi/checkwifi.log`
     - Credit to https://weworkweplay.com/play/rebooting-the-raspberry-pi-when-it-loses-wireless-connection-wifi/ for providing these steps
 1. In the router, reserve a static IP for the Raspberry Pi, remember this IP
 1. Restart the Raspberry Pi to make sure all settings are saved
