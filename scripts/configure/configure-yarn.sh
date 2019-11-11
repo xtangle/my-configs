@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
+source bootstrap-my-configs
 
 function install_yarn_pkg {
   local -r installed="${1}"

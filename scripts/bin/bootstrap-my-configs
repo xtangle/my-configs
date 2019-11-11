@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+source "${HOME}/Projects/my-configs/scripts/bootstrap/bootstrap.sh"

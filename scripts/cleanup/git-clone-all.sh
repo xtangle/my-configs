@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
+source bootstrap-my-configs
 
 function git_clone {
   local -r repo="${1}"
