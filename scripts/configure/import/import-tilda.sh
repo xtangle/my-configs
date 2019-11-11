@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
 
 set -e
+source bootstrap-my-configs
+
+echo ">> Importing configuration for Tilda"
 
 # copy configs
 mkdir -p "${HOME}/.config/tilda"
 backup "${HOME}/.config/tilda/config_0"
-cp -f "${CONFIG_FILES}/Tilda/config_0" "${HOME}/.config/tilda"
+cp -f "${MY_CONFIGS_FILES}/Tilda/config_0" "${HOME}/.config/tilda"
 
 # adjust positioning
 width_ratio=0.75
 height_ratio=0.7
-width_pixels=$(bc <<< "${width_ratio} * ${SCREEN_WIDTH} / 1")
-height_pixels=$(bc <<< "${height_ratio} * ${SCREEN_HEIGHT} / 1")
-x_pos=$(bc <<< "(${SCREEN_WIDTH} - ${width_pixels}) / 2")
+width_pixels=$(bc <<< "${width_ratio} * ${PROVISION_DISPLAY_WIDTH} / 1")
+height_pixels=$(bc <<< "${height_ratio} * ${PROVISION_DISPLAY_HEIGHT} / 1")
+x_pos=$(bc <<< "(${PROVISION_DISPLAY_WIDTH} - ${width_pixels}) / 2")
 y_pos=0
 
 sed -i -E \

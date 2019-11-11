@@ -1,4 +1,7 @@
 language: bash
+env:
+  global:
+    - SHELLCHECK_OPTS="-e SC1090 -e SC1091"
 script:
   - shellcheck --version
   - for file in $(find ./scripts -type f); do shellcheck --format=gcc $file; done;

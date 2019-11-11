@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-"${HOME}/Projects/my-configs/scripts/configure/git-pull-all.sh" "$@"
+"${HOME}/Projects/my-configs/scripts/cleanup/git-pull-all.sh" "$@"
