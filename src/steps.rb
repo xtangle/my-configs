@@ -1,26 +1,31 @@
 module Provision
-  module Steps
-    MY_CONFIGS_SCRIPTS_DIR = '${HOME}/Projects/my-configs/scripts'
+  module MyConfigsSteps
+    SCRIPTS_DIR = '${HOME}/Projects/my-configs/scripts'
 
-    def self.post_prepare(config, provision_vars)
-      Utils::provision_script(config, 'post_prepare', "#{MY_CONFIGS_SCRIPTS_DIR}/prepare/prepare-my-configs.sh")
-      Utils::provision_script(config, 'post_prepare', "#{MY_CONFIGS_SCRIPTS_DIR}/prepare/prepare-secrets.sh")
+    def prepare(config, provision_vars)
+      super
+      Utils::provision_script(config, 'prepare', "#{SCRIPTS_DIR}/prepare/prepare-my-configs.sh")
+      Utils::provision_script(config, 'prepare', "#{SCRIPTS_DIR}/prepare/prepare-secrets.sh")
     end
 
-    def self.post_install(config, provision_vars)
-      Utils::provision_script(config, 'post_install', "#{MY_CONFIGS_SCRIPTS_DIR}/install/install-utils.sh")
+    def install(config, provision_vars)
+      super
+      Utils::provision_script(config, 'install', "#{SCRIPTS_DIR}/install/install-utils.sh")
     end
 
-    def self.post_configure(config, provision_vars)
-      Utils::provision_script(config, 'post_configure', "#{MY_CONFIGS_SCRIPTS_DIR}/configure/configure-tilda.sh")
-      Utils::provision_script(config, 'post_configure', "#{MY_CONFIGS_SCRIPTS_DIR}/configure/configure-yarn.sh")
-      Utils::provision_script(config, 'post_configure', "#{MY_CONFIGS_SCRIPTS_DIR}/configure/configure-intellij.sh")
-      Utils::provision_script(config, 'post_configure', "#{MY_CONFIGS_SCRIPTS_DIR}/configure/import/import-configs.sh")
+    def configure(config, provision_vars)
+      super
+      Utils::provision_script(config, 'configure', "#{SCRIPTS_DIR}/configure/configure-tilda.sh")
+      Utils::provision_script(config, 'configure', "#{SCRIPTS_DIR}/configure/configure-yarn.sh")
+      Utils::provision_script(config, 'configure', "#{SCRIPTS_DIR}/configure/configure-intellij.sh")
+      Utils::provision_script(config, 'configure', "#{SCRIPTS_DIR}/configure/import/import-configs.sh")
     end
 
-    def self.post_cleanup(config, provision_vars)
-      Utils::provision_script(config, 'post_cleanup', "#{MY_CONFIGS_SCRIPTS_DIR}/cleanup/git-clone-all.sh")
-      Utils::provision_script(config, 'post_cleanup', "#{MY_CONFIGS_SCRIPTS_DIR}/cleanup/git-pull-all.sh")
+
+    def cleanup(config, provision_vars)
+      super
+      Utils::provision_script(config, 'cleanup', "#{SCRIPTS_DIR}/cleanup/git-clone-all.sh")
+      Utils::provision_script(config, 'cleanup', "#{SCRIPTS_DIR}/cleanup/git-pull-all.sh")
     end
   end
 end
