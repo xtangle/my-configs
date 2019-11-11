@@ -19,11 +19,6 @@ height_pixels=$(bc <<< "${height_ratio} * ${PROVISION_DISPLAY_HEIGHT} / ${scale}
 x_pos=$(bc <<< "((${PROVISION_DISPLAY_WIDTH} / ${scale}) - ${width_pixels}) / 2")
 y_pos=0
 
-echo ">> width_pixels: '${width_pixels}'"
-echo ">> height_pixels: '${height_pixels}'"
-echo ">> x_pos: '${x_pos}'"
-echo ">> y_pos: '${y_pos}'"
-
 sed -i -E \
   -e "s/(max_width)=.*/\1=${width_pixels}/" \
   -e "s/(max_height)=.*/\1=${height_pixels}/" \
