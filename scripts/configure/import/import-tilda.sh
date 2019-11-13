@@ -5,6 +5,10 @@ source bootstrap-my-configs
 
 echo ">> Importing configuration for Tilda"
 
+# stop tilda
+echo ">> Stopping Tilda"
+kill_program tilda
+
 # copy configs
 mkdir -p "${HOME}/.config/tilda"
 backup "${HOME}/.config/tilda/config_0"
@@ -25,3 +29,7 @@ sed -i -E \
   -e "s/(x_pos)=.*/\1=${x_pos}/" \
   -e "s/(y_pos)=.*/\1=${y_pos}/" \
   "${HOME}/.config/tilda/config_0"
+
+# start tilda
+echo ">> Starting Tilda"
+run_in_background tilda
