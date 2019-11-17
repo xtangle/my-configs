@@ -22,6 +22,7 @@ This is a step-by-step summary on setting up Pi-hole on a Raspberry Pi Zero W as
             "origin=Raspbian,codename=${distro_codename},label=Raspbian";
             "origin=Raspberry Pi Foundation,codename=${distro_codename},label=Raspberry Pi Foundation";
             ``` 
+        1. Next, apply the steps in this guide: https://libre-software.net/ubuntu-automatic-updates/
 1. Set up script to automatically restart wireless network when network connection is dropped:
     - As sudo, create the file `/usr/local/bin/checkwifi.sh` with contents:
         ```shell script
