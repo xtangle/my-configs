@@ -50,6 +50,7 @@ This is a step-by-step summary on setting up Pi-hole on a Raspberry Pi Zero W as
 1. In the router, reserve a static IP for the Raspberry Pi, remember this IP
 1. Restart the Raspberry Pi to make sure all settings are saved
 1. Install pi-hole, see: https://github.com/pi-hole/pi-hole/#one-step-automated-install
+    - During installation, when asked to select the upstream DNS server, the following benchmark tool is useful to determine which DNS server is the fastest: https://www.grc.com/dns/benchmark.htm
 1. When installation is finished, configure router's DNS to **only** be the IP of the Raspberry Pi where pi-hole is installed
 1. (Optional) To enable Pi-hole to list names instead of IPs of devices on a LAN (assuming DHCP server is enabled on the router), a feature called conditional forwarding on the Pi-hole has to be enabled:
     1. In the Pi-hole web admin page, go to DNS settings: http://pi.hole/admin/settings.php?tab=dns
