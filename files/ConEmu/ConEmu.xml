@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-11-03 21:43:13" build="190714">
+		<key name=".Vanilla" modified="2019-12-27 17:50:20" build="191012">
 			<value name="Language" type="string" data="en"/>
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
@@ -145,9 +145,9 @@
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd X" type="long" data="334"/>
+			<value name="ConWnd X" type="long" data="122"/>
 			<value name="ConWnd Y" type="long" data="0"/>
-			<value name="LastMonitor" type="string" data="0,0,2560,1390"/>
+			<value name="LastMonitor" type="string" data="0,0,3840,2060"/>
 			<value name="ConWnd Width" type="dword" data="000000bd"/>
 			<value name="ConWnd Height" type="dword" data="0000002c"/>
 			<value name="16bit Height" type="ulong" data="0"/>
@@ -757,23 +757,23 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='"%SystemRoot%\System32\bash.exe" -new_console:d:"E:\"'/>
 				</key>
-				<key name="Task19" modified="2019-11-03 21:43:13" build="190714">
+				<key name="Task19" modified="2019-12-27 17:50:20" build="191012">
 					<value name="Name" type="string" data="{cmd_newdir}"/>
 					<value name="Flags" type="dword" data="00000007"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data='/dir "E:\"'/>
+					<value name="GuiArgs" type="string" data='/dir "D:\"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd" -new_console:d:"E:\"'/>
+					<value name="Cmd1" type="string" data='cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd" -new_console:d:"D:\"'/>
 				</key>
-				<key name="Task20" modified="2019-11-03 21:43:13" build="190714">
+				<key name="Task20" modified="2019-12-27 17:50:20" build="191012">
 					<value name="Name" type="string" data="{cygwin_bash_newdir}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='set CHERE_INVOKING=1 &amp; set "PATH=D:\Executables\cygwin64\bin;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe -new_console:p D:\Executables\cygwin64\bin\bash.exe --login -i -new_console:C:"D:\Executables\cygwin64\Cygwin.ico" -new_console:d:"E:\"'/>
+					<value name="Cmd1" type="string" data='set CHERE_INVOKING=1 &amp; set "PATH=D:\Executables\cygwin64\bin;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe -new_console:p D:\Executables\cygwin64\bin\bash.exe --login -i -new_console:C:"D:\Executables\cygwin64\Cygwin.ico" -new_console:d:"D:\"'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2018-10-21 21:25:34" build="180626">
