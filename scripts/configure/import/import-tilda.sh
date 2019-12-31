@@ -32,4 +32,4 @@ sed -i -E \
 
 # start tilda
 echo ">> Starting Tilda"
-run_in_background tilda
+run_in_background tilda # this does not work, requires X-server to be running (thru ssh)
