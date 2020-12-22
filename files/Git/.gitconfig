@@ -4,6 +4,7 @@
   email = jackyxu07@gmail.com
 [credential]
   helper = store
+  helper = cache
 [core]
   eol = lf
   autocrlf = input
