@@ -6,6 +6,9 @@ alias urldecode='python3 -c "import sys, urllib.parse; print(urllib.parse.unquot
 alias pd='pushd'
 alias po='popd'
 
+# alias for clearing the terminal
+alias cls='printf $(tput clear)'
+
 # aliases for git
 alias ga='git add'
 alias gb='git branch'
@@ -33,3 +36,6 @@ alias h2='how2'
 # aliases for shellcheck
 alias sc='shellcheck'
 alias sca='shellcheck-all'
+
+# alias for lazydocker
+alias lzd='lazydocker'

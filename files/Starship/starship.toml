@@ -6,7 +6,8 @@ truncation_length = 0
 
 [time]
 disabled = false
-format = "%F %T"
+format = '[\[$time\]]($style) '
+time_format = "%F %T"
 
 [git_branch]
 symbol = "🌱 "
