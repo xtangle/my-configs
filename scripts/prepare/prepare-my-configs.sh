@@ -9,3 +9,5 @@ cat > "${HOME}/.rc/my-configs" << EOL
 export PATH="${bin_dir}:\${PATH}"
 EOL
 source_in_profile "\${HOME}/.rc/my-configs"
+
+echo "Sourced the my-configs bootstrap scripts to be available in the PATH"

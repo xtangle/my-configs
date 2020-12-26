@@ -1,8 +1,9 @@
 --- !ruby/object:Provision::Config::Config
-serial_version_id: 1f5bf7b09312097817fe40e9fc3ec504247c1bef
+serial_version_id: '095085bbda339f7d7e3929baa9e48b785bd592e9'
 vm_name: devbox
-base_memory: 32768
+base_memory: 32
 disk_space: 500
+swap_size: 16
 processors: 12
 video_memory: 128
 monitor_count: 1

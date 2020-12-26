@@ -16,4 +16,6 @@ sudo cp -f "${MY_CONFIGS_FILES}/IntelliJ/60-jetbrains.conf" "/etc/sysctl.d"
 
 # sometimes, IntelliJ on Linux does not pick up your custom keymaps
 # to fix this, keymaps needs to be copied to this folder: "${HOME}/.config/JetBrains/IntelliJIdea${installed_version}/jba_config/linux.keymaps"
-cp -f "${MY_CONFIGS_FILES}/IntelliJ/Jacky_s Keymap.xml" "${HOME}/.config/JetBrains/IntelliJIdea${installed_version}/jba_config/linux.keymaps"
+keymaps_dir="${HOME}/.config/JetBrains/IntelliJIdea${installed_version}/jba_config/linux.keymaps"
+mkdir -p "${keymaps_dir}"
+cp -f "${MY_CONFIGS_FILES}/IntelliJ/Jacky_s Keymap.xml" "${keymaps_dir}"
