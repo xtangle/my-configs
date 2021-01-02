@@ -10,6 +10,6 @@ monitor_count: 1
 timezone: ''
 extra_mounts:
   Projects: ".."
-  LocalProjects: "C:/Users/jacky/LocalProjects"
+  # LocalProjects: "C:/Users/jacky/LocalProjects"
 extra_steps:
   MyConfigsSteps: "../my-configs/src/steps.rb"
