@@ -3,7 +3,9 @@
   username = xtangle
   email = jackyxu07@gmail.com
 [credential]
+  helper = cache
   helper = store
+  helper = wincred
 [core]
   eol = lf
   autocrlf = input

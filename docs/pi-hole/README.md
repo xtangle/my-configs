@@ -64,6 +64,8 @@ This is a step-by-step summary on setting up Pi-hole on a Raspberry Pi Zero W as
 - Crontab to automatically restart wireless network connection when network goes down: https://weworkweplay.com/play/rebooting-the-raspberry-pi-when-it-loses-wireless-connection-wifi/
 - Stack Overflow answer to making `unattended-upgrades` package work on Raspbian OS: https://raspberrypi.stackexchange.com/a/38990
 - Pi-hole subreddit page: https://www.reddit.com/r/pihole/ 
+- Fixing issues with slowness:
+    - https://pi-hole.net/2018/02/02/why-some-pages-load-slow-when-using-pi-hole-and-how-to-fix-it/#page-content
 - Other guides on setting up Pi-hole on a Raspberry Pi Zero:
     - http://blog.deadlypenguin.com/blog/2019/02/11/pi-hole-setup-raspberry-pi-zero/
     - https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/install-pi-hole

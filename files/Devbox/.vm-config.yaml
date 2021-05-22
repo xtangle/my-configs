@@ -1,16 +1,15 @@
 --- !ruby/object:Provision::Config::Config
-serial_version_id: db3659855c7a400ec23318ff99cf41344b3d33f2
+serial_version_id: '095085bbda339f7d7e3929baa9e48b785bd592e9'
 vm_name: devbox
-base_memory: 8192
-disk_space: 50
-processors: 4
+base_memory: 32
+disk_space: 500
+swap_size: 16
+processors: 12
 video_memory: 128
 monitor_count: 1
-timezone: America/Toronto
+timezone: ''
 extra_mounts:
   Projects: ".."
-  C_Drive: "C:/"
-  D_Drive: "D:/"
-  E_Drive: "E:/"
-external_steps:
-  - "../my-configs/src/steps.rb"
+  # LocalProjects: "C:/Users/jacky/LocalProjects"
+extra_steps:
+  MyConfigsSteps: "../my-configs/src/steps.rb"

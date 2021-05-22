@@ -165,3 +165,9 @@ function shellcheck-all() {
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# update the title in terminal with the current directory
+PROMPT_COMMAND='echo -ne "\033]2;${PWD/#${HOME}/\~}\007"'
+
+# starship configuration
+eval "$(starship init bash)"
